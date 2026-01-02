@@ -2,47 +2,38 @@ import java.util.ArrayList;
 public class Bfs{
     public static void main(String... args)
     {
+        //Number of vertices
+        int n = 8;
         ArrayList<ArrayList<Integer>> al = new ArrayList<>();
         
+        for(int i=0;i<=n;i++)
+            al.add(new ArrayList<>());
+
+        //We ignore index 0
+        
         //Node 1
-        ArrayList<Integer> l = new ArrayList<>();
-        l.add(2);
-        l.add(3);
-        l.add(4);
-        al.add(l);
+        al.get(1).add(2);
+        al.get(1).add(3);
+        al.get(1).add(4);
 
-        //Node 2
-        l = new ArrayList<>();
-        al.add(l);
+        //Node 2 - no elements
+        
+        //Node 3 
+        al.get(3).add(5);
+        al.get(3).add(6);
 
-        //Node 3
-        l = new ArrayList<>();
-        l.add(5);
-        l.add(6);
-        al.add(l);
-
-        //Node 4
-        l = new ArrayList<>();
-        al.add(l);
+        //Node 4 - no elements
 
         //Node 5
-        l = new ArrayList<>();
-        l.add(7);
-        al.add(l);
+        al.get(5).add(7);
 
         //Node 6
-        l = new ArrayList<>();
-        l.add(8);
-        al.add(l);
+        al.get(6).add(8);
 
-        //Node 7
-        l = new ArrayList<>();
-        al.add(l);
-
-        //Node 8
-        l = new ArrayList<>();  
-        al.add(l);
-
+        //Node 7 - no elements
+        //Node 8 - no elements
+        
+        
         for(ArrayList<Integer> a : al)
         {
             for(int i : a)
