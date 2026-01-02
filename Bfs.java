@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 public class Bfs{
     public static void main(String... args)
     {
@@ -12,15 +13,12 @@ public class Bfs{
         //We ignore index 0
         
         //Node 1
-        al.get(1).add(2);
-        al.get(1).add(3);
-        al.get(1).add(4);
+        al.get(1).addAll(Arrays.asList(2,3,4));
 
         //Node 2 - no elements
         
         //Node 3 
-        al.get(3).add(5);
-        al.get(3).add(6);
+        al.get(3).addAll(Arrays.asList(5,6));
 
         //Node 4 - no elements
 
@@ -32,7 +30,7 @@ public class Bfs{
 
         //Node 7 - no elements
         //Node 8 - no elements
-        
+
         
         for(ArrayList<Integer> a : al)
         {
